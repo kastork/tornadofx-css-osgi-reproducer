@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.felix:org.apache.felix.scr.ds-annotations:1.2.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.scr.ds-annotations/1.2.8/7b605befdc4f8e248455da25e7b58d18296caabb/org.apache.felix.scr.ds-annotations-1.2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.scr.ds-annotations/1.2.8/3315375f33fb8b13cbd9735c0fd9d60d70966b4d/org.apache.felix.scr.ds-annotations-1.2.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

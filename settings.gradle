@@ -1,0 +1,3 @@
+rootProject.name = 'osgi-css'
+
+include 'app'

@@ -1,0 +1,53 @@
+buildscript {
+	ext.kotlin_version = '1.1.2-2'
+	ext.tornadofx_version = '1.7.5-SNAPSHOT'
+	dependencies {
+		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+	}
+	repositories {
+		mavenCentral()
+		jcenter()
+	}
+}
+
+plugins {
+	id "org.dm.bundle" version "0.10.0"
+	id "com.athaydes.osgi-run" version "1.5.4"
+}
+
+repositories {
+	mavenCentral()
+	jcenter()
+	maven {url "https://oss.sonatype.org/content/repositories/snapshots"}
+	maven {url "http://repo.maven.apache.org/maven2"}
+}
+
+dependencies {
+	osgiRuntime "org.jetbrains.kotlin:kotlin-osgi-bundle:$kotlin_version"
+	osgiRuntime 'org.apache.felix:org.apache.felix.scr:2.0.10'
+	osgiRuntime "no.tornado:tornadofx:$tornadofx_version"
+//	systemLib "no.tornado:tornadofx:$tornadofx_version"
+	osgiRuntime 'no.tornado:javafx-osgi:8.0'
+	osgiRuntime 'org.glassfish:javax.json:1.0.4'
+	osgiRuntime 'org.apache.httpcomponents:httpcore-osgi:4.4.6'
+  	osgiRuntime 'org.apache.httpcomponents:httpclient-osgi:4.5.3'
+	osgiRuntime 'org.apache.felix:org.apache.felix.configadmin:1.8.14'
+}
+
+runOsgi {
+	bundles += subprojects
+	config += [
+			'org.osgi.framework.storage.clean': 'onFirstInit',
+			'org.osgi.framework.system.packages.extra': 'javafx,tornadofx.osgi,com.sun.deploy.uitoolkit.impl.fx,com.sun.deploy.uitoolkit.impl.fx.ui,org.apache.felix.scrplugin,org.apache.felix.scrplugin.annotations,org.apache.felix.scrplugin.description,org.osgi.service.component.annotations'
+	]
+
+	wrapInstructions {
+		manifest( /commons-logging.*/ ) {
+			instruction 'Import-Package', '!javax.servlet,!org.apache.*,*'
+		}
+		manifest( /httpclient-cache.*/ ) {
+			instruction 'Import-Package', '!net.sf.*,!org.slf4j.*,!net.spy.memcached,*'
+		}
+	}
+}
+
