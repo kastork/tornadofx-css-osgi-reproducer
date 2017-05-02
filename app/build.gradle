@@ -8,9 +8,11 @@ buildscript {
 	}
 }
 
-apply plugin: "org.dm.bundle"
+//apply plugin: "org.dm.bundle"
+apply plugin: "osgi"
 apply plugin: 'com.athaydes.osgi-run'
 apply plugin: 'kotlin'
+apply plugin: 'com.athaydes.osgi-ds'
 
 group = 'net.kirkstork.issues'
 version = '0.0-SNAPSHOT'
@@ -50,6 +52,30 @@ runOsgi {
 	copyManifestTo file('generated-sources/MANIFEST.MF')
 }
 
-bundle {
-	instruction '-dsannotations', '*'
+jar {
+	manifest {
+		instruction '-dsannotations', '*'
+		instruction 'Import-Package', 'sun.net.www.protocol.css,org.osgi.service.url,javafx.event,javafx.scene,javafx.scene.control,javafx.scene.layout,kotlin,kotlin.jvm.functions,kotlin.jvm.internal,kotlin.reflect,tornadofx,tornadofx.osgi'
+	}
 }
+
+declarativeServices {
+	declarations {
+		component( name: 'app' ) {
+			implementation( 'class': 'net.kirkstork.issues.AppRegistration' )
+			service {
+				provide( 'interface': 'tornadofx.osgi.ApplicationProvider' )
+			}
+		}
+//		component(name: 'masterStyles') {
+//			implementation( 'class': 'net.kirkstork.issues.StyleRegistration')
+//			service {
+//				provide( 'interface': 'tornadofx.osgi.StylesheetProvider' )
+//			}
+//		}
+	}
+
+	// uncomment to print the generated XML file when building
+//	 show()
+}
+
