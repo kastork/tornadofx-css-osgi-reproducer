@@ -21,7 +21,6 @@ class MyApp() : App(MainView::class, MasterStyles::class) {
 //class MyApp() : App(MainView::class) {
 	init {
 		System.err.println("MyApp init...")
-		reloadStylesheetsOnFocus()
 	}
 }
 
