@@ -22,8 +22,8 @@ class MyApp() : App(MainView::class, MasterStyles::class) {
 	init {
 		System.err.println("MyApp init...")
 
-	//	Do not use when running in OSGI framework
-	// reloadStylesheetsOnFocus()
+	//	Not really useful when running in OSGI framework
+	 reloadStylesheetsOnFocus()
 	}
 }
 
@@ -46,7 +46,7 @@ class MasterStyles : Stylesheet() {
 	init {
 		foo {
 			fontFamily = "Verdana"
-			fontSize = 48.pt
+			fontSize = 12.pt
 		}
 	}
 
