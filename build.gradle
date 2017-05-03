@@ -35,8 +35,9 @@ dependencies {
 
 runOsgi {
 	bundles += subprojects
+
 	config += [
-			'org.osgi.framework.storage.clean'        : 'onFirstInit',
+			'org.osgi.framework.storage.clean'        : 'true',
 			'org.osgi.framework.system.packages.extra': 'javafx,tornadofx.osgi,com.sun.deploy.uitoolkit.impl.fx,com.sun.deploy.uitoolkit.impl.fx.ui'
 	]
 	wrapInstructions {

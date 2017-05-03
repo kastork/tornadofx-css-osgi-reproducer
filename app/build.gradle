@@ -55,24 +55,24 @@ runOsgi {
 jar {
 	manifest {
 		instruction '-dsannotations', '*'
-		instruction 'Import-Package', 'sun.net.www.protocol.css,org.osgi.service.url,javafx.event,javafx.scene,javafx.scene.control,javafx.scene.layout,kotlin,kotlin.jvm.functions,kotlin.jvm.internal,kotlin.reflect,tornadofx,tornadofx.osgi'
+		instruction 'Import-Package', 'sun.net.www.protocol.css, tornadofx,com.sun.javafx.scene.control.behavior,com.sun.javafx.scene.control.skin,javafx.animation,javafx.application,javafx.beans,javafx.beans.binding,javafx.beans.property,javafx.beans.value,javafx.collections,javafx.collections.transformation,javafx.concurrent,javafx.css,javafx.event,javafx.fxml,javafx.geometry,javafx.scene,javafx.scene.canvas,javafx.scene.chart,javafx.scene.control,javafx.scene.effect,javafx.scene.image,javafx.scene.input,javafx.scene.layout,javafx.scene.paint,javafx.scene.shape,javafx.scene.text,javafx.scene.web,javafx.stage,javafx.util,javax.json,kotlin.collections,kotlin.jvm,kotlin.jvm.functions,kotlin.jvm.internal,kotlin.properties,kotlin.reflect,kotlin.text,org.apache.http.client.methods,org.apache.http.client.protocol,org.apache.http.impl.client,tornadofx.osgi,kotlin,org.osgi.framework'
 	}
 }
 
 declarativeServices {
 	declarations {
-		component( name: 'app' ) {
-			implementation( 'class': 'net.kirkstork.issues.AppRegistration' )
+		component(name: 'app') {
+			implementation('class': 'net.kirkstork.issues.AppRegistration')
 			service {
-				provide( 'interface': 'tornadofx.osgi.ApplicationProvider' )
+				provide('interface': 'tornadofx.osgi.ApplicationProvider')
 			}
 		}
-//		component(name: 'masterStyles') {
-//			implementation( 'class': 'net.kirkstork.issues.StyleRegistration')
-//			service {
-//				provide( 'interface': 'tornadofx.osgi.StylesheetProvider' )
-//			}
-//		}
+		component(name: 'masterStyles') {
+			implementation('class': 'net.kirkstork.issues.StyleRegistration')
+			service {
+				provide('interface': 'tornadofx.osgi.StylesheetProvider')
+			}
+		}
 	}
 
 	// uncomment to print the generated XML file when building
