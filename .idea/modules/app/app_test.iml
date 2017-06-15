@@ -6,7 +6,7 @@
         <compilerSettings />
         <compilerArguments>
           <option name="destination" value="$MODULE_DIR$/../../../app/build/kotlin-classes/test" />
-          <option name="classpath" value="$MODULE_DIR$/../../../app/build/classes/main:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre8/1.1.2-2/dd267c09da9c17ca21037429205eb12bf81489f7/kotlin-stdlib-jre8-1.1.2-2.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/no.tornado/tornadofx/1.7.5-SNAPSHOT/b66a2cf355c5ce36921c1d512298557ab4dd95b1/tornadofx-1.7.5-SNAPSHOT.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.service.component.annotations/1.3.0/ef17ec0e7f73cd144599da108d72a24285d1f5d5/org.osgi.service.component.annotations-1.3.0.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.core/6.0.0/c49acdc9ac62cf69ee49cb6f1905b4fdb79ea5c/org.osgi.core-6.0.0.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.scr.ds-annotations/1.2.8/7b605befdc4f8e248455da25e7b58d18296caabb/org.apache.felix.scr.ds-annotations-1.2.8.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test/1.1.2-2/5df5b0edbe06217411883e978c97e08aeba5e561/kotlin-test-1.1.2-2.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jre7/1.1.2-2/cec67c14515d8af92ae3e20e27b6da50a26fde84/kotlin-stdlib-jre7-1.1.2-2.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.glassfish/javax.json/1.0.4/3178f73569fd7a1e5ffc464e680f7a8cc784b85a/javax.json-1.0.4.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.1.2/b8cc2f486359a56c0c1b1dd125141c19d8db1734/kotlin-reflect-1.1.2.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.1.2-2/2b22828f027e103dcd45f3aa240338bfdb53d16b/kotlin-stdlib-1.1.2-2.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" />
+          <option name="classpath" value="$MODULE_DIR$/../../../app/build/classes/main:/Users/kirk/.m2/repository/no/tornado/tornadofx/1.7.7-SNAPSHOT/tornadofx-1.7.7-SNAPSHOT.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.service.component.annotations/1.3.0/ef17ec0e7f73cd144599da108d72a24285d1f5d5/org.osgi.service.component.annotations-1.3.0.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.osgi/org.osgi.core/6.0.0/c49acdc9ac62cf69ee49cb6f1905b4fdb79ea5c/org.osgi.core-6.0.0.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.apache.felix.scr.ds-annotations/1.2.8/7b605befdc4f8e248455da25e7b58d18296caabb/org.apache.felix.scr.ds-annotations-1.2.8.jar:/Users/kirk/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-test/1.1.2-2/5df5b0edbe06217411883e978c97e08aeba5e561/kotlin-test-1.1.2-2.jar:/Users/kirk/.m2/repository/org/glassfish/javax.json/1.0.4/javax.json-1.0.4.jar:/Users/kirk/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jre8/1.1.2-5/kotlin-stdlib-jre8-1.1.2-5.jar:/Users/kirk/.m2/repository/org/jetbrains/kotlin/kotlin-reflect/1.1.2-5/kotlin-reflect-1.1.2-5.jar:/Users/kirk/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jre7/1.1.2-5/kotlin-stdlib-jre7-1.1.2-5.jar:/Users/kirk/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.1.2-5/kotlin-stdlib-1.1.2-5.jar:/Users/kirk/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="app_main" />
@@ -37,16 +37,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="app_main" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.2-2" level="project" />
-    <orderEntry type="library" name="Gradle: no.tornado:tornadofx:1.7.5-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Gradle: no.tornado:tornadofx:1.7.7-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Gradle: org.osgi:org.osgi.service.component.annotations:1.3.0" level="project" />
     <orderEntry type="library" name="Gradle: org.osgi:org.osgi.core:6.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.felix:org.apache.felix.scr.ds-annotations:1.2.8" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-test:1.1.2-2" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.2-2" level="project" />
     <orderEntry type="library" name="Gradle: org.glassfish:javax.json:1.0.4" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.1.2" level="project" />
-    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.2-2" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.2-5" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.1.2-5" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jre7:1.1.2-5" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.1.2-5" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="app_main" />

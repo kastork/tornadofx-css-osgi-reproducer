@@ -1,10 +1,11 @@
 buildscript {
-	ext.kotlin_version = '1.1.2-2'
-	ext.tornadofx_version = '1.7.5-SNAPSHOT'
+	ext.kotlin_version = '1.1.2'
+	ext.tornadofx_version = '1.7.6'
 	dependencies {
 		classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 	}
 	repositories {
+		mavenLocal()
 		mavenCentral()
 		jcenter()
 	}
@@ -25,12 +26,14 @@ repositories {
 
 dependencies {
 	osgiRuntime 'org.apache.felix:org.apache.felix.scr:2.0.10', {transitive = false}
-	osgiRuntime 'no.tornado:javafx-osgi:8.0'
+	osgiRuntime 'no.tornado:javafx-osgi:8.0.1'
 	osgiRuntime "no.tornado:tornadofx:$tornadofx_version"
 	osgiRuntime 'org.apache.httpcomponents:httpcore-osgi:4.4.6'
 	osgiRuntime 'org.apache.httpcomponents:httpclient-osgi:4.5.3'
 	osgiRuntime 'org.apache.felix:org.apache.felix.configadmin:1.8.14'
-	osgiRuntime "org.jetbrains.kotlin:kotlin-osgi-bundle:$kotlin_version"
+	osgiRuntime("org.jetbrains.kotlin:kotlin-osgi-bundle:$kotlin_version") {
+		exclude module: 'kotlin-stdlib-jre8'
+	}
 	osgiRuntime 'org.glassfish:javax.json:1.0.4'
 }
 
