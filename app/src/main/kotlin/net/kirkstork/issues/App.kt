@@ -30,7 +30,7 @@ class MyApp() : App(MainView::class, MasterStyles::class) {
 
 class MainView : View() {
 	override val root = vbox {
-		button("Press Me")
+		button("Press Me").action { println("Fu !")}
 		label("Fu !")
       {
 			addClass(MasterStyles.foo)
